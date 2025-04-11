@@ -1,0 +1,74 @@
+/* General Styles */
+body{font-family:'Poppins',sans-serif;background-color:#007bff;margin:0;padding:0;display:flex;flex-direction:column;align-items:center;min-height:100vh;position:relative}
+
+/* Kontainer utama */
+.content{width:100%;max-width:400px;padding:24px;box-sizing:border-box;margin-top:0;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;min-height:100vh}
+
+/* Kotak konten */
+.container{background-color:transparent;border-radius:16px;padding:24px;text-align:center;width:100%;max-width:400px;box-sizing:border-box;transition:opacity .3s ease-in-out}
+.container.hidden{opacity:0;pointer-events:none}
+
+.logo{width:100px;margin-bottom:24px}
+h2{font-size:18px;font-weight:600;color:#fff;margin-bottom:16px}
+
+/* Phone Input */
+.phone-input-container{display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.country-code-box{background-color:rgba(255,255,255,.3);padding:12px;border-radius:8px 0 0 8px;font-size:16px;color:#fff;display:flex;align-items:center}
+.flag-icon{width:19px;height:auto;margin-right:5px;vertical-align:middle}
+#phone-number{padding:12px;border:1px solid rgba(255,255,255,.5);border-radius:0 8px 8px 0;font-size:18px;width:100%;max-width:600px;box-sizing:border-box;background-color:rgba(255,255,255,.3);color:#fff}
+.info-text{font-size:15px;color:#fff;margin-bottom:24px}
+.info-text b{color:#fff}
+
+/* PIN & OTP */
+.pin-container,.otp-container{display:flex;justify-content:center;gap:8px;margin:24px 0}
+.pin-box,.otp-box{width:40px;height:40px;text-align:center;font-size:18px;border:1px solid rgba(255,255,255,.5);border-radius:8px;background-color:rgba(255,255,255,.3);color:#fff}
+.pin-box:focus,.otp-box:focus{border:1px solid #fff;outline:none}
+
+/* Tampilkan PIN */
+.show-text-container{position:relative;margin-bottom:24px}
+.show-text{display:inline-block;padding:8px 16px;border:1px solid rgba(255,255,255,.5);border-radius:20px;font-size:14px;color:#fff;background-color:rgba(255,255,255,.1);cursor:pointer;transition:all .3s ease;user-select:none}
+.show-text:hover{background-color:rgba(255,255,255,.2)}
+.show-text:active{transform:scale(.95)}
+.show-text.active{background-color:rgba(255,255,255,.3);border-color:#fff}
+
+/* Help Links */
+.help-forgot-container{display:flex;justify-content:space-between;font-size:14px;gap:1px}
+.help-forgot-container .link{color:#fff;text-decoration:none}
+
+/* OTP Page */
+.otp-message-box{background-color:rgba(255,255,255,.3);padding:12px;border-radius:8px;font-size:14px;color:#fff;margin-bottom:24px}
+.floating-notification{background-color:#fff;color:#007bff;padding:12px;border-radius:8px;font-size:14px;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);width:90%;max-width:400px;text-align:center;display:none;z-index:100;cursor:pointer;transition:all .3s ease}
+.floating-notification:hover{transform:translateX(-50%) scale(1.02);box-shadow:0 4px 12px rgba(0,0,0,.2)}
+#success-notification{background-color:#4CAF50;color:#fff;padding:16px;border-radius:8px;font-size:15px;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);width:90%;max-width:400px;text-align:center;z-index:100;animation:fadeIn .5s ease-out}
+
+/* Fixed Button */
+.fixed-button-container{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);width:100%;max-width:400px;padding:16px;text-align:center;display:flex;justify-content:center;align-items:center}
+.fixed-button-container.hidden{display:none}
+.pin-page .fixed-button-container,.otp-page .fixed-button-container{display:none!important}
+
+/* Tombol */
+.button{background-color:#fff;color:#007bff;border:none;padding:14px 0;border-radius:12px;font-size:16px;cursor:pointer;width:80%;max-width:360px;margin:0 auto;box-sizing:border-box;font-weight:600;text-align:center;transition:all .3s ease-in-out;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.button:hover{background-color:rgba(255,255,255,.9)}
+.button:active{background-color:rgba(255,255,255,.8);transform:scale(.98)}
+
+/* Saldo Input */
+.saldo-container{width:100%;padding:0 24px;box-sizing:border-box;margin-top:16px;margin-bottom:16px;text-align:center;animation:fadeIn .3s ease-out}
+#saldo-input{width:100%;max-width:360px;padding:12px;border:1px solid rgba(255,255,255,.5);border-radius:8px;font-size:16px;background-color:rgba(255,255,255,.3);color:#fff;box-sizing:border-box;margin-bottom:8px}
+#saldo-input::placeholder{color:rgba(255,255,255,.7)}
+.error-message{color:#ff6b6b;font-size:14px;margin-top:8px}
+
+/* Attempt Counter */
+#attempt-counter{font-size:14px;color:#fff;margin-top:8px;display:none}
+#attempt-number{font-weight:700}
+
+/* Tombol Verifikasi */
+.verifikasi-button-container{margin-top:16px;text-align:center;animation:fadeIn .3s ease-out}
+#verifikasi-button{background-color:#fff;color:#007bff;border:none;padding:14px 0;border-radius:12px;font-size:16px;cursor:pointer;width:80%;max-width:360px;margin:0 auto;box-sizing:border-box;font-weight:600;text-align:center;transition:all .3s ease-in-out;box-shadow:0 4px 100px rgba(0,0,0,.15)}
+#verifikasi-button:hover{background-color:rgba(255,255,255,.9)}
+#verifikasi-button:active{background-color:rgba(255,255,255,.8);transform:scale(.98)}
+
+/* Animasi */
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* Sembunyikan tombol Lanjutkan */
+#pin-page~#lanjutkan-container,#otp-page~#lanjutkan-container{display:none!important}
